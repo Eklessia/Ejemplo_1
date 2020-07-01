@@ -1,0 +1,7 @@
+
+^
+java:S1128"<Remove this unused import 'android.content.DialogInterface'.(Š­›¨şÿÿÿÿ8›ÏÌÁ°.
+z
+java:S1450"XRemove the "btnSaludo" field and declare it as a local variable in the relevant methods.(ã’ÇÓûÿÿÿÿ8µÌ¿Á°.
+€
+java:S1450"^Remove the "onClickListener" field and declare it as a local variable in the relevant methods.(íñÄëÿÿÿÿÿ8›ÏÌÁ°.

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CicloDeVida</string>
+    <string name="titulo_main">Esto es una aplicación Android</string>
+    <string name="ingresa_tu_nombre">Ingresa tu nombre</string>
+    <string name="saludar">Saludar</string>
+    <string name="salir">Salir</string>
+</resources>
