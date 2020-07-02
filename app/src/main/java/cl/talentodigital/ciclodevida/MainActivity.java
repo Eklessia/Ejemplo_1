@@ -1,41 +1,43 @@
 package cl.talentodigital.ciclodevida;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
-    private Button btnSaludo;
-    private Button btnSalir;
+    private Button btnRegistro;
+    private Button btnMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d("CicloDeVida", "onCreate");
         setContentView(R.layout.activity_main);
-        btnSaludo = findViewById(R.id.btnSaludo);
-        btnSalir = findViewById(R.id.btnSalir);
+        btnRegistro = findViewById(R.id.btnRegistro);
+        btnMenu = findViewById(R.id.btnMenu);
 
-        btnSaludo.setOnClickListener(this);
-        btnSalir.setOnClickListener(this);
+        btnRegistro.setOnClickListener((View v) -> goToRegistro());
+        btnMenu.setOnClickListener((View v) -> goToMenu());
 
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btnSalir:
-                finish();
-                break;
-            case R.id.btnSaludo:
-                Log.d("CicloDeVida", "OnClick de saludo");
-                break;
-        }
+
+
+    private void goToRegistro() {
+        Intent intent = new Intent(this, RegistroUsuariosActivity.class);
+        startActivity(intent);
+    }
+
+    private void goToMenu() {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
     }
 
     @Override
